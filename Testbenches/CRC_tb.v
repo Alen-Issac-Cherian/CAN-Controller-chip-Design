@@ -21,7 +21,7 @@ begin
  ptr = 4'd15;
  size = 15'd16;
  rst_n = 0;
- #10;
+ #9;
  rst_n = 1;
  #130;
  $finish;
