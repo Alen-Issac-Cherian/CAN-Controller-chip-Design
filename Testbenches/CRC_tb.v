@@ -2,28 +2,33 @@
 
 module CRC_tb;
 
-reg clk, rst_n, Din;
+reg clk, rst_n, valid;
 reg [15:0] size;
-
-reg [15:0] data;
-reg [3:0] ptr;
+reg [23:0] Din;
 
 wire [14:0] checksum;
 
-CRC check (clk, rst_n, Din, size, checksum);
+CRC check (clk, rst_n, Din, valid, size, checksum);
 
 initial
 begin
  $dumpfile("../Dumpfiles/CRC_tb.vcd");
  $dumpvars(0, CRC_tb);
 
- data = 16'habcd;
- ptr = 4'd15;
- size = 15'd16;
+ size = 15'd3;
  rst_n = 0;
- #9;
+ Din = 24'habcdef;
+ valid = 0;
+ #10;
  rst_n = 1;
- #130;
+ #5;
+ valid = 1;
+ #5;
+ valid = 0;
+ #40
+ Din = 24'hfedcba;
+ valid = 1;
+ #60;
  $finish;
 end
 
@@ -33,13 +38,6 @@ begin
  #1;
  clk = 1'b0;
  #1;
-end
-
-always @(posedge clk)
-begin
- Din = data[ptr];
- if(rst_n)
-  ptr <= ptr - 4'd1;
 end
 
 endmodule
