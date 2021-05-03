@@ -1,6 +1,6 @@
 /*
 MODULE OVERVIEW:
-This module computes the Cyclic Redundancy Check for an input bitstream.
+This module computes the Cyclic Redundancy Check for an input data byte of length 16 bits or more.
 The generator polynomial that is used to carry out the polynomial division is x^15 + x^14 + x^10 + x^8 + x^7 + x^4 + x^3 + x^0,i.e, 1100010110011001.
 The remainder has 15 bits.
 */

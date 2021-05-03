@@ -28,7 +28,7 @@ begin
  #40
  Din = 24'hfedcba;
  valid = 1;
- #60;
+ #100;
  $finish;
 end
 

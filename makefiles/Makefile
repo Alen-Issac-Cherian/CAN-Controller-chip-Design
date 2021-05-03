@@ -3,7 +3,7 @@
 
 CC=iverilog
 FLAGS=-Wall -Winfloop
-SOURCE_FILES= ../Testbenches/CRC_tb.v ../Design/CRC.v
+SOURCE_FILES= ../Testbenches/CRC_tb.v ../Design/CRC.v ../Design/sequence.v
 DUMPFILES=../Dumpfiles/CRC_tb.vcd
 
 create:
