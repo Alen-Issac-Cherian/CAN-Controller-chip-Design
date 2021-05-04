@@ -1,0 +1,180 @@
+$date
+	Tue May  4 22:53:03 2021
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module seq_8_test $end
+$var wire 1 ! dout $end
+$var reg 1 " clk $end
+$var reg 1 # din $end
+$var reg 1 $ load $end
+$var reg 1 % rst_n $end
+$var integer 32 & i [31:0] $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 1 # din $end
+$var wire 1 $ load $end
+$var wire 1 % rst $end
+$var reg 3 ' counter [2:0] $end
+$var reg 8 ( data [7:0] $end
+$var reg 1 ) din_buff $end
+$var reg 1 ! dout $end
+$var reg 3 * ns [2:0] $end
+$var reg 3 + ps [2:0] $end
+$scope begin com_pro $end
+$upscope $end
+$scope begin syn_pro $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx +
+bx *
+x)
+bx (
+bx '
+bx &
+1%
+0$
+0#
+0"
+x!
+$end
+#10
+0!
+b1 *
+z)
+b0 '
+bz (
+b1 +
+1"
+#20
+0"
+#25
+b0 &
+1$
+0%
+#30
+0)
+1"
+#40
+0"
+#50
+1"
+#60
+0"
+#65
+b1 &
+1#
+#70
+1)
+1"
+#80
+0"
+#90
+1"
+#100
+0"
+#105
+b10 &
+0#
+#110
+0)
+1"
+#120
+0"
+#130
+1"
+#140
+0"
+#145
+b11 &
+1#
+#150
+1)
+1"
+#160
+0"
+#170
+1"
+#180
+0"
+#185
+0$
+b100 &
+0#
+#190
+0)
+1"
+#200
+0"
+#210
+1"
+#220
+0"
+#225
+b0 &
+#230
+1"
+#240
+0"
+#250
+1"
+#260
+0"
+#265
+b1 &
+1#
+#270
+1)
+1"
+#280
+0"
+#290
+1"
+#300
+0"
+#305
+b10 &
+0#
+#310
+0)
+1"
+#320
+0"
+#330
+1"
+#340
+0"
+#345
+b11 &
+1#
+#350
+1)
+1"
+#360
+0"
+#370
+1"
+#380
+0"
+#385
+b100 &
+0#
+#390
+0)
+1"
+#400
+0"
+#410
+1"
+#420
+0"
+#425
+1#
