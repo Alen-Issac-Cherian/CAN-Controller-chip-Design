@@ -6,16 +6,16 @@ module seq_8_test ;
  reg clk, rst_n, load, din; 
  wire dout ;
  //reg [3:0] coun ;
- integer i,j,t ;
+ integer i;
 
  localparam period = 10;
 
  seq_8 uut (clk, rst_n, load, din, dout) ;
 
  initial begin 
- $dumpfile("../Dumpfiles/seq_tb.vcd");
- $dumpvars(0, seq_tb);
- t = 0 ;
+ $dumpfile("D:\Sublime Text 3\CAN-Controller-chip-Design\Dumpfilesseq_tb.vcd");
+ //$dumpvars(0, seq_tb);
+ 
  rst_n = 1 ;
  clk = 0 ;
  load = 0 ;
@@ -28,6 +28,8 @@ module seq_8_test ;
     din = ~din ;
   end
 
+  load = 0 ;
+
  #40 ;
   for(i = 0 ; i < 4 ; i = i+1) begin
    #40 ;
@@ -36,7 +38,7 @@ module seq_8_test ;
 
  #40 ;
   din = 1;
-  $finish
+  $finish;
  end
 
 always 
