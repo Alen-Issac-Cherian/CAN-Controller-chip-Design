@@ -13,7 +13,7 @@ module seq_8_test ;
  seq_8 uut (clk, rst_n, load, din, dout) ;
 
  initial begin 
- $dumpfile("D:\Sublime Text 3\CAN-Controller-chip-Design\Dumpfilesseq_tb.vcd");
+ $dumpfile("D:\Sublime Text 3\CAN-Controller-chip-Design\Dumpfiles\seq_tb.vcd");
  //$dumpvars(0, seq_tb);
  
  rst_n = 1 ;

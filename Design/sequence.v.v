@@ -56,19 +56,19 @@ begin : com_pro
   		    else ns = u_data ;
   		   end
 
-  s_data : begin 									             //serial data accepted from din.
-   			if(din_buff == data[counter]) begin 	 //checks input serial data with data register.
+  s_data : begin 									//serial data accepted from din.
+   			if(din_buff == data[counter]) begin 	//checks input serial data with data register.
    			  counter = counter + 3'b001 ;			
    			   if(counter == 3'b111)				
-   			    dout = 1 ;							         //if the sequence is same then output 1.
-   			   else dout = 0 ;					         //if sequence is not matching then output 0.
+   			    dout = 1 ;							//if the sequence is same then output 1.
+   			   else dout = 0 ;						//if sequence is not matching then output 0.
    			 end
    			else begin 
-			  counter = 3'b000 ;				        	//counter is reset.
+			  counter = 3'b000 ;					//counter is reset.
 			  dout = 0 ;
 			 end
 
-			 ns = s_data ;						           //stay in the same state until reset is high.
+			 ns = s_data ;							//stay in the same state until reset is high.
 		   end 
 
   default : begin
