@@ -33,7 +33,7 @@ begin
 end
 
 //Sequential block to perform CRC calculation
-always @(posedge clk or negedge rst_n)
+always @(posedge clk)
 begin
  case(CS)
   IDLE:

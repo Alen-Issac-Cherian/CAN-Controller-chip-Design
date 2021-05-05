@@ -1,5 +1,5 @@
 $date
-	Wed May  5 14:25:35 2021
+	Wed May  5 16:17:37 2021
 $end
 $version
 	Icarus Verilog
@@ -12,17 +12,17 @@ $var wire 1 ! dout $end
 $var reg 1 " clk $end
 $var reg 1 # din $end
 $var reg 1 $ load $end
-$var reg 1 % rst $end
+$var reg 1 % rst_n $end
 $var integer 32 & i [31:0] $end
 $scope module uut $end
 $var wire 1 " clk $end
 $var wire 1 # din $end
 $var wire 1 $ load $end
-$var wire 1 % rst $end
-$var reg 4 ' counter [3:0] $end
+$var wire 1 % rst_n $end
+$var wire 1 ! dout $end
+$var reg 3 ' counter [2:0] $end
 $var reg 8 ( data [7:0] $end
-$var reg 1 ) din_buff $end
-$var reg 1 ! dout $end
+$var reg 1 ) flag $end
 $var reg 3 * ns [2:0] $end
 $var reg 3 + ps [2:0] $end
 $scope begin com_pro $end
@@ -34,21 +34,21 @@ $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-bx +
+b1 +
 b1 *
 0)
 bx (
-b0 '
+bx '
 bx &
-1%
+0%
 0$
 0#
 0"
 0!
 $end
 #10
-bz (
-b1 +
+b0 (
+b111 '
 1"
 #20
 0"
@@ -56,140 +56,143 @@ b1 +
 b10 *
 b0 &
 1$
-0%
+1%
 #30
-bz0 (
-b1 '
 b10 +
 1"
 #40
 0"
 #50
+b110 '
 1"
 #60
 0"
 #65
-bz10 (
-b10 '
-1)
 b1 &
 1#
 #70
+b101 '
+b1000000 (
 1"
 #80
 0"
 #90
+b100 '
+b1100000 (
 1"
 #100
 0"
 #105
-bz010 (
-b11 '
-0)
 b10 &
 0#
 #110
+b11 '
 1"
 #120
 0"
 #130
+b10 '
 1"
 #140
 0"
 #145
-bz1010 (
-b100 '
-1)
 b11 &
 1#
 #150
+b1 '
+b1100100 (
 1"
 #160
 0"
 #170
+b0 '
+b1100110 (
 1"
 #180
 0"
 #185
-bz011010 (
-0)
-b110 '
+b100 *
 0$
 b100 &
 0#
 #190
+b111 '
+b100 +
 1"
 #200
 0"
 #210
+b110 '
 1"
 #220
 0"
 #225
 b0 &
 #230
+b111 '
 1"
 #240
 0"
 #250
+b110 '
 1"
 #260
 0"
 #265
-bz1011010 (
-b111 '
-1)
 b1 &
 1#
 #270
+b101 '
 1"
 #280
 0"
 #290
+b100 '
 1"
 #300
 0"
 #305
-b1011010 (
-b1 *
-b1000 '
-0)
 b10 &
 0#
 #310
-b0 '
-b1 +
+b11 '
 1"
 #320
 0"
 #330
+b10 '
 1"
 #340
 0"
 #345
-1)
 b11 &
 1#
 #350
+b1 '
 1"
 #360
 0"
 #370
+b0 '
 1"
 #380
 0"
 #385
-0)
+1!
+1)
 b100 &
 0#
 #390
+b111 '
 1"
 #400
 0"
 #410
+b110 '
 1"
 #420
 0"
 #425
-1)
+0!
+0)
 1#
