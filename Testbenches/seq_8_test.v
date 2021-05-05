@@ -13,7 +13,8 @@ module seq_8_test ;
  seq_8 uut (clk, rst, load, din, dout) ;
 
  initial begin
- $dumpfile("seq_8_test.vcd");
+ $dumpfile("../Dumpfiles/seq_8_test.vcd");
+ //$dumpfile("seq_8_test.vcd");
  $dumpvars(0, seq_8_test);
 
  rst = 1 ;
@@ -39,7 +40,7 @@ module seq_8_test ;
  #40 ;
   din = 1;
   $finish;
- #100; 
+ #100;
  end
 
 always
