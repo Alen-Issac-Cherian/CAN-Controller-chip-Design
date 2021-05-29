@@ -6,9 +6,9 @@ module memory_tb;
 
 //inputs
 reg            clk;        //clock
-reg            rst_n;     //active low reset
+reg            rst_n;      //active low reset
 reg            rw;         //read(1) or write(0)
-reg  [7:0]     addr;     //read and write address
+reg  [7:0]     addr;       //read and write address
 reg  [7:0]     Din;        //input data bus
 
 //output
