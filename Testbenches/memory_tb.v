@@ -101,13 +101,13 @@ Din = 8'hBB ;
 rw = 1 ;
 addr = 8'hEE ;
 #10;
-if(Dout != 8'hEE)
+if(Dout == 8'hEE)
 error = error + 1;
 #10;
 
 addr = 8'hEE ;
 #10;
-if(Dout != 8'hEE)
+if(Dout == 8'hEE)
 error = error + 1;
 #10;
 
