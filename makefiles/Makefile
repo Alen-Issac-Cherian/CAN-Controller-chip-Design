@@ -7,8 +7,8 @@
 
 CC=iverilog
 FLAGS=-Wall -Winfloop
-SOURCE_FILES= ../Testbenches/seq_8_test.v ../Design/seq_8.v
-DUMPFILES=../Dumpfiles/seq_8_test.vcd
+SOURCE_FILES= ../Testbenches/memory_tb.v ../Design/memory.v
+DUMPFILES=../Dumpfiles/memory_tb.vcd
 
 create:
 	${CC} ${FLAGS} -o output.bin ${SOURCE_FILES}
