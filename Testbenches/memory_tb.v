@@ -8,6 +8,7 @@ module memory_tb;
 reg            clk;        //clock
 reg            rst_n;      //active low reset
 reg            rw;         //read(1) or write(0)
+reg            search;     //CAM search signal
 reg  [7:0]     addr;       //read and write address
 reg  [7:0]     Din;        //input data bus
 
@@ -18,7 +19,7 @@ integer error, i ; //end of test flag
 
 localparam period = 10;
 
-memory uut (.clk(clk), .rst_n(rst_n), .rw(rw), .addr(addr), .Din(Din), .Dout(Dout));
+memory uut (.clk(clk), .rst_n(rst_n), .rw(rw), .search(search), .addr(addr), .Din(Din), .Dout(Dout));
 
 initial begin
 $dumpfile("../Dumpfiles/memory_tb.vcd");
@@ -31,7 +32,7 @@ addr = 8'h00;
 Din = 8'h00 ;
 addr = 0;
 error = 0;
-
+search = 0;
 
 #5;
 //write
